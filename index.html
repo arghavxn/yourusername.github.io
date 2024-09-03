@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arqawan Noori - Portfolio</title>
+    <title>Arghavan Noori - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -25,19 +25,60 @@
             background-color: var(--bg-color);
         }
         .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 2rem 0;
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
         }
         header {
-            background-color: var(--secondary-color);
-            color: var(--primary-color);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        padding: 1rem 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    main {
+    padding-top: 60px; /* Adjust this value based on your header height */
+}
+        @media (max-width: 768px) {
+    .timeline-item {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        border-radius: 8px;
+    }
+
+    .timeline::after {
+        display: none;
+    }
+
+    .timeline-item::after {
+        display: none;
+    }
+
+    .left::before, .right::before {
+        display: none;
+    }
+
+    nav ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        flex: 0 0 auto;
+        margin: 0 10px;
+    }
+
+    header {
+        overflow-x: hidden;
+    }
+}
         nav {
             display: flex;
             justify-content: center;
@@ -92,7 +133,7 @@
             color: var(--secondary-color);
         }
         .social-buttons {
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
         .social-button {
             display: inline-block;
@@ -104,6 +145,19 @@
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
+        .social-buttons .btn {
+        margin: 0 0.5rem;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    .social-buttons .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
         .social-button:hover {
             background-color: var(--primary-color);
             color: var(--secondary-color);
@@ -174,13 +228,9 @@
             margin-bottom: 0.5rem;
         }
         .education-card {
-        background-color: #f9f9f9;
-        border-radius: 8px;
-        padding: 1.5rem;
-        text-align: center;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    max-width: 350px;
+    margin: 0 auto;
+}
         
         .edu-logo {
         width: 100px;
@@ -220,14 +270,15 @@
         }
         }
         .education-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
         .timeline {
             position: relative;
             max-width: 800px;
             margin: 0 auto;
+            padding: 20px 0;
         }
         .timeline::after {
             content: '';
@@ -240,10 +291,10 @@
             margin-left: -1px;
         }
         .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
         }
         .timeline-item::after {
             content: '';
@@ -327,8 +378,9 @@
             to { opacity: 1; }
         }
         section {
-            animation: fadeIn 1s ease-out;
+            padding: 4rem 0;
         }
+
         .btn {
             display: inline-block;
             padding: 0.8rem 1.5rem;
@@ -397,9 +449,9 @@
 
     <main>
         <section id="home">
-            <img src="Picture.jpg" alt="Arqawan Noori" class="profile-photo">
-            <h1>Arqawan Noori</h1>
-            <p>Computer Science Student & Aspiring Software Developer</p>
+            <img src="Picture.jpg" alt="Arghavan Noori" class="profile-photo">
+            <h1>Arghavan Noori</h1>
+            <p>Computer Science Student, Aspiring Software Developer & Product Manager</p>
             <div class="social-buttons">
                 <a href="https://github.com/arghavxn" class="btn" target="_blank">GitHub</a>
                 <a href="https://www.linkedin.com/in/arghavan-noori/" class="btn" target="_blank">LinkedIn</a>
@@ -521,27 +573,23 @@
         </section>
 
         <section id="resume" class="container" style="text-align: center;">
-            <a href="Resume .pdf" class="download-btn">Download Resume</a>
+            <a href="Resume.pdf" class="download-btn">Download Resume</a>
         </section>
 
-        <form class="contact-form" action="https://formspree.io/f/xzzpwzen" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <section id="contact" class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <form class="contact-form" action="https://formspree.io/f/xzzpwzen" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <input type="hidden" name="_next" value="https://arghavxn.github.io/thank-you.html">
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Arqawan Noori. All rights reserved.</p>
+        <p>&copy; 2023 Arghavan Noori. All rights reserved.</p>
     </footer>
-
-    <script>
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
