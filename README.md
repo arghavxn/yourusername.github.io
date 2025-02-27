@@ -6,7 +6,7 @@ This is a responsive personal portfolio website built with HTML, CSS, and vanill
 ![Portfolio Screenshot](/path/to/screenshot.png)
 
 ## Live Demo
-[View the live portfolio here](https://arghavxn.github.io/)
+[View the live portfolio here](https://arghavxn.github.io)
 
 ## Features
 - Mobile-first responsive design
