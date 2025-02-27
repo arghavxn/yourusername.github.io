@@ -3,10 +3,6 @@
 ## Overview
 This is a responsive personal portfolio website built with HTML, CSS, and vanilla JavaScript. The portfolio showcases my skills, projects, education, and experience as a Computer Science student and aspiring Software Developer & Product Manager.
 
-![Portfolio Screenshot](/path/to/screenshot.png)
-
-## Live Demo
-[View the live portfolio here](https://arghavxn.github.io)
 
 ## Features
 - Mobile-first responsive design
