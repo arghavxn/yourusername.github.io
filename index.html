@@ -431,6 +431,35 @@
             background-color: var(--secondary-color);
             color: var(--primary-color);
         }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .tag {
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .project-card-highlights {
+            margin-top: 1rem;
+            padding-left: 1.2rem;
+        }
+        .project-card-highlights li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        .project-card-highlights li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: -1.2rem;
+        }
     </style>
 </head>
 <body>
@@ -459,9 +488,9 @@
         </section>
         <section id="about" class="container">
             <h2 class="section-title">About Me</h2>
-            <p>Hey there! I'm Arqawan Noori, a Computer Science major at Mississippi Valley State University with a passion for crafting innovative solutions and learning new technologies. I’ve had the chance to explore a variety of fields—from developing AI chat platforms and fun iOS apps to redesigning websites and improving systems as a technical support intern. My journey has taken me across different countries and universities, from Afghanistan to Kyrgyzstan and now the U.S., and it has shaped my diverse skill set in software engineering, web development, and iOS development.</p>
+            <p>Hey there! I'm Arqawan Noori, a Computer Science major at Mississippi Valley State University with a passion for crafting innovative solutions and learning new technologies. I've had the chance to explore a variety of fields—from developing AI chat platforms and fun iOS apps to redesigning websites and improving systems as a technical support intern. My journey has taken me across different countries and universities, from Afghanistan to Kyrgyzstan and now the U.S., and it has shaped my diverse skill set in software engineering, web development, and iOS development.</p>
 
-            <p> I’m a firm believer in the power of technology to bring positive change, especially when it comes to diversity and inclusion in STEM. When I’m not coding or problem-solving, you’ll find me advocating for more representation in tech spaces, designing user-friendly interfaces, or diving into the latest trends in AI. I’m always excited to connect with others who share a love for technology, creativity, and making a difference. </p>
+            <p> I'm a firm believer in the power of technology to bring positive change, especially when it comes to diversity and inclusion in STEM. When I'm not coding or problem-solving, you'll find me advocating for more representation in tech spaces, designing user-friendly interfaces, or diving into the latest trends in AI. I'm always excited to connect with others who share a love for technology, creativity, and making a difference. </p>
         </section>
         
         <section id="skills" class="container">
@@ -499,42 +528,143 @@
                     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git">
                     <span>Git</span>
                 </div>
+                <div class="skill-item">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python">
+                    <span>Python</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
             </div>
         </section>
 
         <section id="projects" class="container">
             <h2 class="section-title">My Projects</h2>
+            
+            <!-- Weather App Project -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/api/placeholder/400/320" alt="Weather App">
+                </div>
+                <div class="project-info">
+                    <h3>Weather App</h3>
+                    <div class="tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">JavaFX</span>
+                        <span class="tag">API Integration</span>
+                        <span class="tag">UI/UX Design</span>
+                    </div>
+                    <p>Developed a user-friendly weather application with JavaFX that delivers real-time weather data using the OpenWeatherMap API. As the product owner and developer, I focused on creating an intuitive interface while implementing robust backend functionality.</p>
+                    <ul class="project-card-highlights">
+                        <li>Implemented API integration with error handling and data validation</li>
+                        <li>Designed responsive UI with intuitive user experience principles</li>
+                        <li>Utilized proper MVC architecture to separate concerns</li>
+                        <li>Conducted user testing to optimize interface and functionality</li>
+                    </ul>
+                    <a href="#" class="btn">GitHub</a>
+                </div>
+            </div>
+            
+            <!-- Face Detection System Project -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/api/placeholder/400/320" alt="Face Detection System">
+                </div>
+                <div class="project-info">
+                    <h3>Advanced Face Detection System</h3>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">OpenCV</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Machine Learning</span>
+                    </div>
+                    <p>Built a sophisticated face detection application using Python and OpenCV that implements multiple detection methods for optimal accuracy. This project showcases my ability to work with complex algorithms and build user-focused solutions.</p>
+                    <ul class="project-card-highlights">
+                        <li>Implemented both Haar Cascade and DNN-based face detection</li>
+                        <li>Created an interactive interface with real-time adjustable parameters</li>
+                        <li>Added multi-threading capabilities for batch processing to improve efficiency</li>
+                        <li>Developed privacy-focused features like face blurring</li>
+                    </ul>
+                    <a href="#" class="btn">GitHub</a>
+                </div>
+            </div>
+            
+            <!-- Real-Time Clock Project -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/api/placeholder/400/320" alt="Real-Time Analog Clock">
+                </div>
+                <div class="project-info">
+                    <h3>Real-Time Analog Clock Visualization</h3>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Matplotlib</span>
+                        <span class="tag">Data Visualization</span>
+                        <span class="tag">UI Design</span>
+                    </div>
+                    <p>Created an aesthetically pleasing animated analog clock using Python and Matplotlib. This project demonstrates my attention to visual design details and ability to create engaging user interfaces.</p>
+                    <ul class="project-card-highlights">
+                        <li>Built smooth animations with the FuncAnimation library</li>
+                        <li>Designed an elegant UI with customized color themes</li>
+                        <li>Implemented precise time calculations for accurate representation</li>
+                        <li>Optimized rendering performance for smooth motion</li>
+                    </ul>
+                    <a href="#" class="btn">GitHub</a>
+                </div>
+            </div>
+            
+            <!-- AI Chat Platform -->
             <div class="project-card">
                 <div class="project-image">
                     <img src="chatpbot pic.jpg" alt="AI Chat Platform">
                 </div>
                 <div class="project-info">
                     <h3>AI Chat Platform</h3>
+                    <div class="tags">
+                        <span class="tag">Swift</span>
+                        <span class="tag">UIKit</span>
+                        <span class="tag">iOS Development</span>
+                    </div>
                     <p>Developed an iOS chat application prototype using Swift and UIKit, implementing a conversational system for various topics.</p>
                     <a href="https://github.com/arghavxn/Chatbot.git" class="btn">GitHub</a>
                 </div>
             </div>
 
+            <!-- Element Quiz App -->
             <div class="project-card">
-                    <div class="project-image">
-                        <img src="elementquiz pic.jpg" alt="Element Quiz App">
-                    </div>
-                    <div class="project-info">
-                        <h3>Element Quiz App</h3>
-                        <p>Created an iOS app for studying chemical elements, utilizing Swift for image creation and efficient UI management.</p>
-                        <a href="https://github.com/arghavxn/Element-Quiz.git" class="btn">GitHub</a>
-                    </div>
+                <div class="project-image">
+                    <img src="elementquiz pic.jpg" alt="Element Quiz App">
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="rps pic.jpg" alt="Rock Paper Scissors Game">
+                <div class="project-info">
+                    <h3>Element Quiz App</h3>
+                    <div class="tags">
+                        <span class="tag">Swift</span>
+                        <span class="tag">iOS</span>
+                        <span class="tag">Educational</span>
                     </div>
-                    <div class="project-info">
-                        <h3>Rock Paper Scissors Game</h3>
-                        <p>Designed and implemented a Swift-based game with core logic for player vs. computer gameplay.</p>
-                        <a href="https://github.com/arghavxn/-Rock-paper-scissors.git" class="btn">GitHub</a>
-                    </div>
+                    <p>Created an iOS app for studying chemical elements, utilizing Swift for image creation and efficient UI management.</p>
+                    <a href="https://github.com/arghavxn/Element-Quiz.git" class="btn">GitHub</a>
                 </div>
+            </div>
+            
+            <!-- Rock Paper Scissors Game -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="rps pic.jpg" alt="Rock Paper Scissors Game">
+                </div>
+                <div class="project-info">
+                    <h3>Rock Paper Scissors Game</h3>
+                    <div class="tags">
+                        <span class="tag">Swift</span>
+                        <span class="tag">iOS</span>
+                        <span class="tag">Game Development</span>
+                    </div>
+                    <p>Designed and implemented a Swift-based game with core logic for player vs. computer gameplay.</p>
+                    <a href="https://github.com/arghavxn/-Rock-paper-scissors.git" class="btn">GitHub</a>
+                </div>
+            </div>
+        </section>
 
         <section id="experience" class="container">
             <h2 class="section-title">My Experience</h2>
