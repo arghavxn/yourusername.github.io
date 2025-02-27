@@ -112,9 +112,3 @@ This project is available under the MIT License. Feel free to use it for your ow
 - [Google Fonts](https://fonts.google.com/) - Roboto Font
 - [Formspree](https://formspree.io/) - Form Processing
 - [DevIcons](https://github.com/devicons/devicon/) - Technology Icons
-
-## Contact
-If you have any questions or suggestions about this portfolio, feel free to contact me at:
-- Email: your-email@example.com
-- LinkedIn: [Arghavan Noori](https://www.linkedin.com/in/arghavan-noori/)
-- GitHub: [arghavxn](https://github.com/arghavxn)
